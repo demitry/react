@@ -553,8 +553,28 @@ We suggest that you begin by typing:
 - npm start
 
 ## Module Introduction [13]
+
 ## Playing Project [14]
 ## Adding JavaScript To A Page & How React Projects Differ [15]
+
+```html
+  <head>
+    <title>JavaScript Refresher</title>
+    <link rel="stylesheet" href="assets/styles/main.css" />
+    <meta charset="UTF-8" />
+
+    <!-- cannot use self-closing script tag <script/>   -->
+    <script src="assets/scripts/app.js" ></script>
+    <script src="assets/scripts/app.js" defer></script> 
+    <!-- defer and execute after whole page loaded -->
+    <script src="assets/scripts/app.js" type="module"></script>
+    <!-- This js file is treated as a module -->
+    <!-- import ... -->
+    <!-- Unfortunately, you can move the script tag to the end of the body section -->
+    <!-- React defers, it uses build process - injects script tags for us -->
+  </head>
+```
+
 ## React Projects Use a Build Process [16]
 ## "import" & "export" [17]
 ## Revisiting Variables & Values [18]
