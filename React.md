@@ -3,6 +3,7 @@
 <!-- TOC -->
 
 - [Intro](#intro)
+- [Creating React Projects Locally [10]](#creating-react-projects-locally-10)
 - [Module Introduction [13]](#module-introduction-13)
 - [Playing Project [14]](#playing-project-14)
 - [Adding JavaScript To A Page & How React Projects Differ [15]](#adding-javascript-to-a-page--how-react-projects-differ-15)
@@ -551,6 +552,8 @@ We suggest that you begin by typing:
 
 - cd react-complete-guide
 - npm start
+
+## Creating React Projects Locally [10]
 
 ## Module Introduction [13]
 
