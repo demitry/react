@@ -2,6 +2,7 @@
 
 <!-- TOC -->
 
+- [Intro](#intro)
 - [Module Introduction [13]](#module-introduction-13)
 - [Playing Project [14]](#playing-project-14)
 - [Adding JavaScript To A Page & How React Projects Differ [15]](#adding-javascript-to-a-page--how-react-projects-differ-15)
@@ -517,6 +518,39 @@
 - [Old Course Content Download [544]](#old-course-content-download-544)
 
 <!-- /TOC -->
+## Intro
+
+npm --version
+
+9.6.7
+
+download project
+
+npm install
+
+npm start
+
+cd react-projects
+npx create-react-app react-complete-guide
+or use vite (create react app)
+
+npx create-react-app react-complete-guide
+...
+- npm start 
+  - Starts the development server.
+- npm run build
+  - Bundles the app into static files for production.
+
+- npm test
+  - Starts the test runner.
+
+- npm run eject
+  - Removes this tool and copies build dependencies, configuration files and scripts into the app directory. If you do this, you can’t go back!
+
+We suggest that you begin by typing:
+
+- cd react-complete-guide
+- npm start
 
 ## Module Introduction [13]
 ## Playing Project [14]
