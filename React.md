@@ -11,6 +11,10 @@
 - [Adding JavaScript To A Page & How React Projects Differ [15]](#adding-javascript-to-a-page--how-react-projects-differ-15)
 - [React Projects Use a Build Process [16]](#react-projects-use-a-build-process-16)
 - ["import" & "export" [17]](#import--export-17)
+    - [named export](#named-export)
+    - [export default](#export-default)
+    - [mix named export and export default](#mix-named-export-and-export-default)
+    - [alias for import value](#alias-for-import-value)
 - [Revisiting Variables & Values [18]](#revisiting-variables--values-18)
 - [Revisiting Operators [19]](#revisiting-operators-19)
 - [Revisiting Functions & Parameters [20]](#revisiting-functions--parameters-20)
@@ -629,6 +633,56 @@ create-react-app, vite - give you a build process, so you need nodejs.
 <https://codesandbox.io/s/react-vs-vanilla-demo-uc08fv>
 
 ## "import" & "export" [17]
+
+### named export
+```js
+// 1 file util.js:
+export let apiKey = "alisduyt287364tfjhf28c347t293746";
+
+// 2 file:
+import { apiKey } from './util.js'
+import { apiKey } from './util'
+// in React '.js' is omitted (because of build process)
+```
+
+in vanilla JS - to import and export use type="module"
+
+```html
+    <script src="assets/scripts/app.js" type="module"></script>
+```
+in react project you won't see 'type="module"' (build process)
+
+### export default
+
+```js
+// default that exported by this file (only one default export)
+export default "alisduyt287364tfjhf28c347t293746";
+//export default 1 //error
+
+import myApiKey from "./util.js"
+
+export default ExpenseDate // export react components
+```
+
+### mix named export and export default
+
+Can mix named export and export default, but default is 1
+
+Import all together as JS object:
+
+```js
+import * as util from "./util.js"
+console.log(util.apiKey)
+```
+
+### alias for import value
+
+```js
+import { apiKey, abc as content } from "./util.js";
+
+console.log(content); //abc value in util.js
+```
+
 ## Revisiting Variables & Values [18]
 ## Revisiting Operators [19]
 ## Revisiting Functions & Parameters [20]
