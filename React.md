@@ -700,6 +700,18 @@ const myConstant= 1;
 There is a sense to widely use const 
 
 ## Revisiting Operators [19]
+
+```js
+console.log(2 + 1);
+console.log(2 - 1);
+console.log(2 === 1);
+console.log(10 >= 10);
+if(10 === 10)
+{
+  console.log("works");
+}
+```
+
 ## Revisiting Functions & Parameters [20]
 ##      Coding Exercise 1: Exercise: Working with Functions [20]
 ## Arrow Functions [21]
