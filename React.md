@@ -18,9 +18,14 @@
 - [Revisiting Variables & Values [18]](#revisiting-variables--values-18)
 - [Revisiting Operators [19]](#revisiting-operators-19)
 - [Revisiting Functions & Parameters [20]](#revisiting-functions--parameters-20)
+    - [parameters](#parameters)
+    - [default values](#default-values)
+    - [return](#return)
+    - [Name them clear!](#name-them-clear)
 - [Coding Exercise 1: Exercise: Working with Functions [20]](#coding-exercise-1-exercise-working-with-functions-20)
 - [Arrow Functions [21]](#arrow-functions-21)
 - [More on the Arrow Function Syntax [22]](#more-on-the-arrow-function-syntax-22)
+    - [Arrow Function Syntax](#arrow-function-syntax)
 - [Revisiting Objects & Classes [23]](#revisiting-objects--classes-23)
 - [Arrays & Array Methods like map [24]](#arrays--array-methods-like-map-24)
 - [Coding Exercise 2: Exercise: Array Methods [24]](#coding-exercise-2-exercise-array-methods-24)
@@ -713,9 +718,147 @@ if(10 === 10)
 ```
 
 ## Revisiting Functions & Parameters [20]
+
+```js
+function greet(){
+  console.log("Hello");
+}
+greet();
+greet();
+greet();
+```
+
+### parameters
+```js
+function greet(userName, message){
+  console.log("Hello");
+  console.log(userName);
+  console.log(message);
+}
+greet("Max", "What's Up?");
+```
+### default values
+```js
+function greet(userName, message = "Hello"){
+  console.log("Hello");
+  console.log(userName);
+  console.log(message);
+}
+greet("Max");
+greet("Max", "Bye!");
+```
+
+### return
+
+functions return undefined by default
+
+functions has 1 return value
+
+```js
+function createGreeting(userName, message = "Hello"){
+  return "Hi, " + userName + "! " + message;
+}
+
+const greeting = createGreeting("Max");
+console.log(greeting);
+```
+### Name them clear!
+
 ##      Coding Exercise 1: Exercise: Working with Functions [20]
+
 ## Arrow Functions [21]
+```js
+ onclick = {() => setActiveContentWindow(0)}
+
+function() {}
+
+export default function() {
+  console.log("Hello");
+}
+
+export default () => {
+  console.log("Hello");
+}
+
+export default (userName, message) => {
+}
+
+export default (userName, message) => {
+  return userName + " " + message;
+}
+```
+
 ## More on the Arrow Function Syntax [22]
+### Arrow Function Syntax
+
+When working with Arrow Functions, you have a couple of "syntax shortcuts" available.
+
+Most importantly, you should know about the following alternatives:
+
+1) Omitting parameter list parentheses
+
+If your arrow functions takes exactly one parameter, you may omit the wrapping parentheses.
+
+Instead of
+
+```js
+(userName) => { ... }
+```
+
+you could write
+
+```js
+userName => { ... }
+```
+
+Please note: 
+
+If your function takes no parameters, parentheses must not be omitted - () => { ... } is the only correct form in that case.
+
+If your function takes more than one parameter, you also must not omit parentheses - userName, userAge => { ... } would be invalid ((userName, userAge) => { ... } is correct)!
+
+2) Omitting function body curly braces
+
+If your arrow function contains no other logic but a return statement, you may omit the curly braces and the return keyword.
+
+Instead of
+```js
+number => { 
+  return number * 3;
+}
+```
+
+you could write
+
+```js
+number => number * 3;
+```
+
+The following code would be invalid:
+```js
+number => return number * 3; // invalid because return keyword must also be omitted!
+number => if (number === 2) { return 5 }; // invalid because if statements can't be returned
+```
+
+3) Special case: Just returning an object
+
+If you go for the shorter alternative explained in 2) and you're trying to return a JavaScript object, you may end up with the following, invalid code:
+
+```js
+number => { age: number }; // trying to return an object
+```
+
+This code would be invalid because JavaScript treats the curly braces as function body wrappers (not as code that creates a JS object).
+
+To "tell" JavaScript that an object should be created (and returned) instead, the code would need to be adjusted like this:
+
+```js
+number => ({ age: number }); // wrapping the object in extra parentheses
+```
+
+By wrapping the object and its curly braces with an extra pair of parentheses, JavaScript understands that the curly braces are not there to define a function body but instead to create an object. Hence that object then gets returned.
+
+
 ## Revisiting Objects & Classes [23]
 ## Arrays & Array Methods like map() [24]
 ##      Coding Exercise 2: Exercise: Array Methods [24]
