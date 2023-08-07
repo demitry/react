@@ -684,6 +684,21 @@ console.log(content); //abc value in util.js
 ```
 
 ## Revisiting Variables & Values [18]
+
+```js
+let myCamelCaseVer = 1;
+let userMessage = "Hello, world!";
+
+//let user-name = "John Smith" //NO dashes!
+//let !user; //NO
+//let ?user; //NO
+
+const myConstant= 1;
+// myConstant = 2; NO, myConstant is read-only
+```
+
+There is a sense to widely use const 
+
 ## Revisiting Operators [19]
 ## Revisiting Functions & Parameters [20]
 ##      Coding Exercise 1: Exercise: Working with Functions [20]
