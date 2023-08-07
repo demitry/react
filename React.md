@@ -605,6 +605,29 @@ create-react-app tool
 ```
 
 ## React Projects Use a Build Process [16]
+
+- Observe index.html
+- There is no < script > tags!
+- The code you write - **is NOT** the code that gets executed!
+- Your code is transformed!
+- Build process in background
+- npm start - start development server
+- real html file contains a lot of scripts,
+- so the transformed code is executed on the page
+
+Reason - Why?
+
+1. Raw unprocessed React code won't execute in a browser
+  - jsx code - html written in javascript 
+  - Out of the box it would not work, it is not standard js feature
+2. This code would not be optimized for production (not minified)
+
+=> react projects require a **build process**
+
+create-react-app, vite - give you a build process, so you need nodejs.
+
+<https://codesandbox.io/s/react-vs-vanilla-demo-uc08fv>
+
 ## "import" & "export" [17]
 ## Revisiting Variables & Values [18]
 ## Revisiting Operators [19]
