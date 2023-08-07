@@ -860,6 +860,43 @@ By wrapping the object and its curly braces with an extra pair of parentheses, J
 
 
 ## Revisiting Objects & Classes [23]
+
+Objects
+- group values
+- key-value pairs
+
+```js
+// Creating objects
+const user = {
+  name: 'John',
+  age: 36,
+  greet() {
+    console.log(this.name); // this
+    return "John"; 
+  }
+};
+
+console.log(user);
+console.log(user.name);
+
+// Blueprints = class
+
+class User { // Capital letter
+  constructor(name, age) {
+    this.name = name;
+    this.age = age;
+  }
+  
+  greet() {
+    console.log(this.name); // this
+    return "John"; 
+  }
+}
+
+const user1 = new User("Max", 34);
+console.log(user1); // object based on blueprint class
+```
+
 ## Arrays & Array Methods like map() [24]
 ##      Coding Exercise 2: Exercise: Array Methods [24]
 ## Destructuring [25]
