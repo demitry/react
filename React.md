@@ -1058,6 +1058,33 @@ list.remove();
 ```
 
 ## Using Functions as Values [30]
+
+```js
+//regular function
+function handleTimeout(){
+  console.log("Timed out");
+}
+
+const handleTimeout2 = () => {
+  console.log("Timed out ... again!");
+};
+
+setTimeout(() => {...});
+
+setTimeout(handleTimeout); // () is missed!, do not call it immediately
+                             // so exec in a future
+
+setTimeout(handleTimeout, 2000); // pass handler of the function
+setTimeout(handleTimeout2, 3000);
+setTimeout(() => {...}, 3000); // anonymous function
+
+function greeter(greetFn) {
+  greetFn();
+}
+
+greeter(() => console.log("Hi"));
+```
+
 ## Defining Functions Inside Of Functions [31]
 ## Reference vs Primitive Values [32]
 ## Next-Gen JavaScript - Summary [33]
