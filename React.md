@@ -924,7 +924,7 @@ const editedHobbies = hobbies.map((item) => ({ text: item })); // bunch of objec
 //Nested arrays
 ```
 
-##      Coding Exercise 2: Exercise: Array Methods [24]
+## Coding Exercise 2: Exercise: Array Methods [24]
 
 Your task is to add the missing logic to a transformToObjects() function that should transform a list of numbers into a list of JavaScript objects.
 
@@ -1027,6 +1027,24 @@ const extendedUser = {
 ```
 
 ## Revisiting Control Structures [28]
+
+```js
+const password = prompt();
+if(password === "Hello") {
+  // ...
+} else if (5 === 5){
+  // ...
+} else {
+  // ...
+}
+
+// for-of loop
+const hobbies = ["Sports", "Cooking"];
+for (const hobby of hobbies){
+  console.log(hobby);
+}
+```
+
 ## Manipulating the DOM - Not With React! [29]
 ## Using Functions as Values [30]
 ## Defining Functions Inside Of Functions [31]
