@@ -1103,6 +1103,18 @@ function init() {
 ```
 
 ## Reference vs Primitive Values [32]
+
+```js
+// Primitives
+let userMessage = "Hello!"; // primitive
+userMessage = userMessage.concat('!!!'); // will produce NEW string
+
+// Objects with Arrays
+const hobbies = ["Sports", "Cooking", "Reading"]; // store address of memory in constant
+//const hobbies = [] // error Type Error: hobbies is read-only
+hobbies.push("Working"); // MUTATE ORIGINAL array
+```
+
 ## Next-Gen JavaScript - Summary [33]
 ## JS Array Functions [34]
 ## Module Resources [35]
@@ -1114,20 +1126,20 @@ function init() {
 ## Analyzing a Standard React Project [41]
 ## Introducing JSX [42]
 ## How React Works [43]
-##      Coding Exercise 3: Exercise: Working with JSX Code [43]
+## Coding Exercise 3: Exercise: Working with JSX Code [43]
 ## Building a First Custom Component [44]
-##      Coding Exercise 4: Exercise: Building a First Component [44]
+## Coding Exercise 4: Exercise: Building a First Component [44]
 ## Writing More Complex JSX Code [45]
 ## Adding Basic CSS Styling [46]
 ## Outputting Dynamic Data & Working with Expressions in JSX [47]
 ## Passing Data via "props" [48]
-##      Coding Exercise 5: Exercise: Passing Data via "props" [48]
+## Coding Exercise 5: Exercise: Passing Data via "props" [48]
 ## Alternative Ways of Passing & Receiving / Handling "props" [49]
 ## Adding "normal" JavaScript Logic to Components [50]
 ## Splitting Components Into Multiple Components [51]
-##      Assignment 1: Time to Practice: React & Component Basics [51]
+## Assignment 1: Time to Practice: React & Component Basics [51]
 ## The Concept of "Composition" ("children props") [52]
-##      Coding Exercise 6: Exercise: Component Composition [52]
+## Coding Exercise 6: Exercise: Component Composition [52]
 ## A First Summary [53]
 ## A Closer Look At JSX [54]
 ## Organizing Component Files [55]
