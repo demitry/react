@@ -31,7 +31,7 @@
 - [Coding Exercise 2: Exercise: Array Methods [24]](#coding-exercise-2-exercise-array-methods-24)
 - [Destructuring [25]](#destructuring-25)
 - [Destructuring in Function Parameter Lists [26]](#destructuring-in-function-parameter-lists-26)
-- [The Spread Operator [27]](#the-spread-operator-27)
+- [The Spread Operator arrays and objects [27]](#the-spread-operator-arrays-and-objects-27)
 - [Revisiting Control Structures [28]](#revisiting-control-structures-28)
 - [Manipulating the DOM - Not With React! [29]](#manipulating-the-dom---not-with-react-29)
 - [Using Functions as Values [30]](#using-functions-as-values-30)
@@ -1005,7 +1005,27 @@ The function would still be called like this:
 storeOrder({id: 5, currency: 'USD', amount: 15.99}); // one argument / value!
 ```
 
-## The Spread Operator [27]
+## The Spread Operator (arrays and objects) [27]
+
+```js
+const hobbies = ["Sports", "Cooking"];
+const newHobbies = ["Reading"];
+
+// Spread - get (comma) separated values from the array, not array object
+const mergedHobbies = [...hobbies, ...newHobbies];
+
+// The same for objects
+const user = {
+  name: "Max",
+  age: 28
+};
+
+const extendedUser = {
+  isAdmin: true,
+  ...user
+};
+```
+
 ## Revisiting Control Structures [28]
 ## Manipulating the DOM - Not With React! [29]
 ## Using Functions as Values [30]
