@@ -26,6 +26,8 @@
     - [Building a First Custom Component [44]](#building-a-first-custom-component-44)
     - [Coding Exercise 4: Exercise: Building a First Component [44]](#coding-exercise-4-exercise-building-a-first-component-44)
     - [Writing More Complex JSX Code [45]](#writing-more-complex-jsx-code-45)
+        - [Should return only 1 root element so wrap in 1 div](#should-return-only-1-root-element-so-wrap-in-1-div)
+        - [Fix](#fix)
     - [Adding Basic CSS Styling [46]](#adding-basic-css-styling-46)
     - [Outputting Dynamic Data & Working with Expressions in JSX [47]](#outputting-dynamic-data--working-with-expressions-in-jsx-47)
     - [Passing Data via "props" [48]](#passing-data-via-props-48)
@@ -820,6 +822,33 @@ export default function App() {
 ```
 
 ### Writing More Complex JSX Code [45]
+
+#### Should return only 1 root element so wrap in 1 div
+
+```js
+function ExpenseItem() {
+    return <div>Hello</div> <div>Hello</div> 
+    // Error!
+}
+```
+
+#### Fix
+```js
+function ExpenseItem() {
+    //return <div>Hello</div> <div>Hello</div> 
+    //Error! Should return only 1 root element so wrap in 1 div
+    return (<div>
+        <div>March 28th 2023</div>
+        <div>
+            <h2>Car Insurance</h2>
+            <div>$245.23</div>
+        </div>
+    </div>);
+}
+
+export default ExpenseItem;
+```
+
 ### Adding Basic CSS Styling [46]
 ### Outputting Dynamic Data & Working with Expressions in JSX [47]
 ### Passing Data via "props" [48]
