@@ -17,6 +17,8 @@
         - [JSX - function App Returns HTML code in JS file](#jsx---function-app-returns-html-code-in-js-file)
         - [Inspect - Inserted root formatted version](#inspect---inserted-root-formatted-version)
     - [Introducing JSX [42]](#introducing-jsx-42)
+        - [App.js this is NOT JS, it is developer-friendly code](#appjs-this-is-not-js-it-is-developer-friendly-code)
+        - [Transformed code in static\js\bundle.js:](#transformed-code-in-static%5Cjs%5Cbundlejs)
     - [How React Works [43]](#how-react-works-43)
     - [Coding Exercise 3: Exercise: Working with JSX Code [43]](#coding-exercise-3-exercise-working-with-jsx-code-43)
     - [Building a First Custom Component [44]](#building-a-first-custom-component-44)
@@ -667,6 +669,76 @@ export default App;
 ```
 
 ### Introducing JSX [42]
+
+- F12 observe React and React DOM library code 
+
+- JSX works because of npm start process
+
+#### App.js this is NOT JS, it is developer-friendly code
+```js
+function App() {
+  return (
+    <div className="App">
+      <header className="App-header">
+        <img src={logo} className="App-logo" alt="logo" />
+        <p>
+          Edit <code>src/App.js</code> and save to reload.
+        </p>
+        ...
+```
+
+#### Transformed code in static\js\bundle.js:
+```js
+function App() {
+  return /*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxDEV)("div", {
+    className: "App",
+    children: /*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxDEV)("header", {
+      className: "App-header",
+      children: [/*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxDEV)("img", {
+        src: _logo_svg__WEBPACK_IMPORTED_MODULE_0__["default"],
+        className: "App-logo",
+        alt: "logo"
+      }, void 0, false, {
+        fileName: _jsxFileName,
+        lineNumber: 8,
+        columnNumber: 9
+      }, this), /*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxDEV)("p", {
+        children: ["Edit ", /*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxDEV)("code", {
+          children: "src/App.js"
+        }, void 0, false, {
+          fileName: _jsxFileName,
+          lineNumber: 10,
+          columnNumber: 16
+        }, this), " and save to reload."]
+      }, void 0, true, {
+        fileName: _jsxFileName,
+        lineNumber: 9,
+        columnNumber: 9
+      }, this), /*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxDEV)("a", {
+        className: "App-link",
+        href: "https://reactjs.org",
+        target: "_blank",
+        rel: "noopener noreferrer",
+        children: "Learn React"
+      }, void 0, false, {
+        fileName: _jsxFileName,
+        lineNumber: 12,
+        columnNumber: 9
+      }, this)]
+    }, void 0, true, {
+      fileName: _jsxFileName,
+      lineNumber: 7,
+      columnNumber: 7
+    }, this)
+  }, void 0, false, {
+    fileName: _jsxFileName,
+    lineNumber: 6,
+    columnNumber: 5
+  }, this);
+}
+
+```
+
 ### How React Works [43]
 ### Coding Exercise 3: Exercise: Working with JSX Code [43]
 ### Building a First Custom Component [44]
