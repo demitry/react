@@ -29,6 +29,7 @@
 - [Revisiting Objects & Classes [23]](#revisiting-objects--classes-23)
 - [Arrays & Array Methods like map [24]](#arrays--array-methods-like-map-24)
 - [Coding Exercise 2: Exercise: Array Methods [24]](#coding-exercise-2-exercise-array-methods-24)
+- [](#)
 - [Destructuring [25]](#destructuring-25)
 - [Destructuring in Function Parameter Lists [26]](#destructuring-in-function-parameter-lists-26)
 - [The Spread Operator [27]](#the-spread-operator-27)
@@ -527,7 +528,6 @@
 - [Finishing Thoughts [541]](#finishing-thoughts-541)
 - [Course Roundup [542]](#course-roundup-542)
 - [Bonus! [543]](#bonus-543)
-- [Old Course Content Download [544]](#old-course-content-download-544)
 
 <!-- /TOC -->
 ## Intro
@@ -920,11 +920,22 @@ const index = hobbies.findIndex((item) =>  item === "Cooking");
 //Transform any item in a array to another item
 hobbies.map((item) => item + "!");
 const editedHobbies = hobbies.map((item) => item + "!");
-const editedHobbies = hobbies.map((item) => { text: item }); // bunch of objects
+const editedHobbies = hobbies.map((item) => ({ text: item })); // bunch of objects
 //Nested arrays
 ```
 
 ##      Coding Exercise 2: Exercise: Array Methods [24]
+
+Your task is to add the missing logic to a transformToObjects() function that should transform a list of numbers into a list of JavaScript objects.
+In the newly returned array, every object must have a val key and the input array's number as a value.
+For example, for the provided input [1, 2, 3] the transformToObjects([1, 2, 3]) function should return [{val: 1}, {val: 2}, {val: 3}].
+
+```js
+function transformToObjects(numberArray) {
+    return numberArray.map(item => ({ val: item }))
+}
+```
+
 ## Destructuring [25]
 ## Destructuring in Function Parameter Lists [26]
 ## The Spread Operator [27]
