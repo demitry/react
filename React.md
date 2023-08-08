@@ -498,14 +498,21 @@
 
 ### Module Introduction [36]
 
-- Component Driven Development
+- Component Driven Development, React is about **Components**
 - React Core Syntax, JSX
 - Working with Data
 - Practice: Expense Tracker
 
 ### What Are Components? And Why Is React All About Them? [37]
 
-
+- Simplifies UI building
+- Error-Prone
+- Identify Components 
+  - same items, reusable UI blocks,
+  - split them into components
+  - and compose them into UI
+  - Separation of Concerns
+  - 1 component = 1 task and purpose
 
 ### React Code Is Written In A "Declarative Way"! [38]
 ### Creating a new React Project [39]
