@@ -801,6 +801,24 @@ import ExpenseItem  from './components/ExpenseItem';
 ```
 
 ### Coding Exercise 4: Exercise: Building a First Component [44]
+
+```js
+import React from 'react';
+
+export default function SomeComponent() {
+  return "First exercise - done!"
+}
+```
+
+```js
+import React from 'react';
+import ExerciseComponent from './ExerciseComponent'
+
+export default function App() {
+    return <ExerciseComponent></ExerciseComponent>;
+}
+```
+
 ### Writing More Complex JSX Code [45]
 ### Adding Basic CSS Styling [46]
 ### Outputting Dynamic Data & Working with Expressions in JSX [47]
