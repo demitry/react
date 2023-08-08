@@ -497,7 +497,16 @@
 ## Section 3: React Basics & Working With Components
 
 ### Module Introduction [36]
+
+- Component Driven Development
+- React Core Syntax, JSX
+- Working with Data
+- Practice: Expense Tracker
+
 ### What Are Components? And Why Is React All About Them? [37]
+
+
+
 ### React Code Is Written In A "Declarative Way"! [38]
 ### Creating a new React Project [39]
 ### The Playing Project [40]
