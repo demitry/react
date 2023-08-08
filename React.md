@@ -1086,6 +1086,22 @@ greeter(() => console.log("Hi"));
 ```
 
 ## Defining Functions Inside Of Functions [31]
+
+- In Vanilla JS - no much sense
+- More sense in a context in React
+
+```js
+function init() {
+  function greet() // defined inside, nested
+  {
+    console.log("Hello");
+  }
+  greet(); 
+}
+
+// greet(); // cannot be executed outside
+```
+
 ## Reference vs Primitive Values [32]
 ## Next-Gen JavaScript - Summary [33]
 ## JS Array Functions [34]
