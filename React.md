@@ -515,7 +515,18 @@
   - 1 component = 1 task and purpose
 
 ### React Code Is Written In A "Declarative Way"! [38]
+
+- CSS is important, **but:**
+- Mostly combining html + js
+
+**Declarative approach**
+- define desired target end state(s)
+- React will do all of the rest under the hood
+
 ### Creating a new React Project [39]
+
+
+
 ### The Playing Project [40]
 ### Analyzing a Standard React Project [41]
 ### Introducing JSX [42]
