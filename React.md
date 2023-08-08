@@ -898,6 +898,32 @@ console.log(user1); // object based on blueprint class
 ```
 
 ## Arrays & Array Methods like map() [24]
+
+- Arrays are technically objects
+- Special kind of objects
+
+```js
+const hobbies = ["Sports", "Cooking", "Reading"];
+console.log(hobbies[0]);
+hobbies.push("Working");
+
+const index = hobbies.findIndex(() => { return
+  //...
+});
+
+const index = hobbies.findIndex((item) => { return
+  item === "Cooking"; 
+});
+
+const index = hobbies.findIndex((item) =>  item === "Cooking");
+
+//Transform any item in a array to another item
+hobbies.map((item) => item + "!");
+const editedHobbies = hobbies.map((item) => item + "!");
+const editedHobbies = hobbies.map((item) => { text: item }); // bunch of objects
+//Nested arrays
+```
+
 ##      Coding Exercise 2: Exercise: Array Methods [24]
 ## Destructuring [25]
 ## Destructuring in Function Parameter Lists [26]
