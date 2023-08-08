@@ -15,6 +15,7 @@
         - [What should be rendered in this div "root"?](#what-should-be-rendered-in-this-div-root)
         - [What is App - Component ?](#what-is-app---component-)
         - [JSX - function App Returns HTML code in JS file](#jsx---function-app-returns-html-code-in-js-file)
+        - [Inspect - Inserted root formatted version](#inspect---inserted-root-formatted-version)
     - [Introducing JSX [42]](#introducing-jsx-42)
     - [How React Works [43]](#how-react-works-43)
     - [Coding Exercise 3: Exercise: Working with JSX Code [43]](#coding-exercise-3-exercise-working-with-jsx-code-43)
@@ -649,7 +650,21 @@ export default App;
 
 #### JSX - function App() Returns HTML code in JS file
 
-- This is JSX
+- And this is JSX...
+
+#### Inspect - Inserted root (formatted version)
+
+```html
+<div id="root">
+    <div class="App">
+        <header class="App-header"><img src="/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg" class="App-logo"
+                alt="logo">
+            <p>Edit <code>src/App.js</code> and save to reload.</p><a class="App-link" href="https://reactjs.org"
+                target="_blank" rel="noopener noreferrer">Learn React</a>
+        </header>
+    </div>
+</div>
+```
 
 ### Introducing JSX [42]
 ### How React Works [43]
