@@ -761,7 +761,45 @@ document.getElementById('root').append(para);
 ```
 
 ### Coding Exercise 3: Exercise: Working with JSX Code [43]
+
+```js
+import React from 'react';
+
+// don't change the Component name "App"
+export default function App() {
+    return (
+        <div>
+            <h1>Exercise done!</h1>
+        </div>
+    );
+}
+```
+
 ### Building a First Custom Component [44]
+
+- components folder
+- 1 file per 1 component
+- Building component tree: root and leaves...
+- Component is just a JS function
+
+- lowercase = built-in elements
+- Uppercase = our defined
+
+ExpenseItem.js
+```js
+function ExpenseItem() {
+    return <h2>Expense Item</h2>
+}
+
+export default ExpenseItem;
+```
+Use in App.js
+```
+import ExpenseItem  from './components/ExpenseItem'; 
+...
+        <ExpenseItem></ExpenseItem>
+```
+
 ### Coding Exercise 4: Exercise: Building a First Component [44]
 ### Writing More Complex JSX Code [45]
 ### Adding Basic CSS Styling [46]

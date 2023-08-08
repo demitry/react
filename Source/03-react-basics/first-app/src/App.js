@@ -1,5 +1,6 @@
 import logo from './logo.svg';
 import './App.css';
+import ExpenseItem  from './components/ExpenseItem'; 
 
 function App() {
   return (
@@ -10,6 +11,7 @@ function App() {
           Edit <code>src/App.js</code> and save to reload.
         </p>
         <p>This is also visible, Wow, on the fly!</p>
+        <ExpenseItem></ExpenseItem>
         <a
           className="App-link"
           href="https://reactjs.org"
