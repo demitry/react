@@ -9,6 +9,12 @@
     - [Creating a new React Project [39]](#creating-a-new-react-project-39)
     - [The Playing Project [40]](#the-playing-project-40)
     - [Analyzing a Standard React Project [41]](#analyzing-a-standard-react-project-41)
+        - [index.js - Entry Point](#indexjs---entry-point)
+        - [package.json](#packagejson)
+        - [div root in index.html](#div-root-in-indexhtml)
+        - [What should be rendered in this div "root"?](#what-should-be-rendered-in-this-div-root)
+        - [What is App - Component ?](#what-is-app---component-)
+        - [JSX - function App Returns HTML code in JS file](#jsx---function-app-returns-html-code-in-js-file)
     - [Introducing JSX [42]](#introducing-jsx-42)
     - [How React Works [43]](#how-react-works-43)
     - [Coding Exercise 3: Exercise: Working with JSX Code [43]](#coding-exercise-3-exercise-working-with-jsx-code-43)
@@ -525,10 +531,126 @@
 
 ### Creating a new React Project [39]
 
+react-complete-guide-code
 
+https://github.com/academind/react-complete-guide-code/tree/03-react-basics-working-with-components/code
+
+```sh
+git clone https://github.com/academind/react-complete-guide-code.git
+```
 
 ### The Playing Project [40]
+
+index.js - entry point, first exec file
+
+this code will be transformed
+
+imports, etc, the normal JS/HTML code will be injected during build
+
 ### Analyzing a Standard React Project [41]
+
+```bash
+npx create-react-app first-app
+first-app
+npm start
+#  Local:            http://localhost:3000        
+#  On Your Network:  http://<IPv4 Address.>:3000   
+# it knows my IPv4 Address )))
+```
+
+#### index.js - Entry Point
+
+```js
+import React from 'react'; 
+import ReactDOM from 'react-dom/client'; // from "react-dom": "^18.2.0", check package.json
+
+import './index.css';
+import App from './App';
+
+import reportWebVitals from './reportWebVitals';
+
+const root = ReactDOM.createRoot(document.getElementById('root'));  // create entry point, main hook, all UI
+
+// What should be rendered in div "root"? 
+root.render(
+  <React.StrictMode> 
+    <App />
+  </React.StrictMode>
+);
+```
+
+#### package.json
+
+```json
+{
+  "name": "first-app",
+// ...
+    "react-dom": "^18.2.0",
+    "react-scripts": "5.0.1",
+}
+```
+
+#### div root in index.html
+
+- The root is created,  Where to place this root?
+  - public folder, index.html contains root
+  - The React code will be injected there
+  
+```html
+<!-- ... -->
+<div id="root"></div>
+<!-- ... -->
+```
+
+#### What should be rendered in this div "root"?
+
+```js
+root.render(
+  <React.StrictMode> 
+    <App />
+  </React.StrictMode>
+);
+```
+
+#### What is App - Component ?
+
+- App is a component
+- export default App;
+- it renders in place of that div
+- App.js:
+
+```js
+import logo from './logo.svg';
+import './App.css';
+
+function App() {
+  return (
+    <div className="App">
+      <header className="App-header">
+        <img src={logo} className="App-logo" alt="logo" />
+        <p>
+          Edit <code>src/App.js</code> and save to reload.
+        </p>
+        <a
+          className="App-link"
+          href="https://reactjs.org"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Learn React
+        </a>
+      </header>
+    </div>
+  );
+}
+
+export default App;
+```
+
+#### JSX - function App() Returns HTML code in JS file
+
+- This is JSX
+
 ### Introducing JSX [42]
 ### How React Works [43]
 ### Coding Exercise 3: Exercise: Working with JSX Code [43]
