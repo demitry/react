@@ -20,6 +20,8 @@
         - [App.js this is NOT JS, it is developer-friendly code](#appjs-this-is-not-js-it-is-developer-friendly-code)
         - [Transformed code in static\js\bundle.js:](#transformed-code-in-static%5Cjs%5Cbundlejs)
     - [How React Works [43]](#how-react-works-43)
+        - [Just Desired state imperative](#just-desired-state-imperative)
+        - [How it was in regular JS](#how-it-was-in-regular-js)
     - [Coding Exercise 3: Exercise: Working with JSX Code [43]](#coding-exercise-3-exercise-working-with-jsx-code-43)
     - [Building a First Custom Component [44]](#building-a-first-custom-component-44)
     - [Coding Exercise 4: Exercise: Building a First Component [44]](#coding-exercise-4-exercise-building-a-first-component-44)
@@ -740,6 +742,24 @@ function App() {
 ```
 
 ### How React Works [43]
+
+- React is responsible for rendering
+
+#### Just Desired state (imperative)
+
+```html
+<p>
+  Edit <code>src/App.js</code> and save to reload.
+</p>
+```
+
+#### How it was in regular JS
+```js
+const para = document.createElement('p');
+para.textContent = "This is also visible";
+document.getElementById('root').append(para);
+```
+
 ### Coding Exercise 3: Exercise: Working with JSX Code [43]
 ### Building a First Custom Component [44]
 ### Coding Exercise 4: Exercise: Building a First Component [44]
