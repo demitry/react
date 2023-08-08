@@ -1046,6 +1046,17 @@ for (const hobby of hobbies){
 ```
 
 ## Manipulating the DOM - Not With React! [29]
+
+- It is the strength of JS
+- But React will do it for us
+
+```js
+const list = document.querySelector("ul");
+list.remove();
+// We will not do it in this course
+// Instead we'll use react for that
+```
+
 ## Using Functions as Values [30]
 ## Defining Functions Inside Of Functions [31]
 ## Reference vs Primitive Values [32]
