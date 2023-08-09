@@ -1056,6 +1056,11 @@ function ExpenseItem(props) {
 ```
 
 ### Splitting Components Into Multiple Components [51]
+
+We pass data from a component to direct child components
+
+Good practice to keep your component small, separate js, css
+
 ### Assignment 1: Time to Practice: React & Component Basics [51]
 ### The Concept of "Composition" ("children props") [52]
 ### Coding Exercise 6: Exercise: Component Composition [52]
