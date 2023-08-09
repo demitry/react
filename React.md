@@ -938,6 +938,62 @@ function ExpenseItem(props) {
 ```
 
 ### Coding Exercise 5: Exercise: Passing Data via "props" [48]
+
+```js
+import React from 'react';
+import './Product.css'
+
+export default function Product(props) {
+    return (
+        <article className="product">
+            <h2>{props.title}</h2>
+            <p className="price">${props.price}</p>
+            <p>{props.description}</p>
+        </article>
+    );
+}
+```
+
+```css
+body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 3rem;
+    background-color: #2d2c2c;
+    color: #959090;
+}
+
+.product {
+    margin: 1rem 0;
+    padding: 1rem;
+    background-color: #373535;
+    color: #e7e4e4;
+    border-radius: 8px;
+}
+
+.product h2,
+.product p {
+    margin: 0.5rem 0;
+}
+
+.price {
+    font-size: 0.75rem;
+    color: #bab6b6;
+}
+```
+
+```js
+  const products = [
+    { title:'Product 1', price: 10, description: 'First product' },
+    { title:'Product 2', price: 20, description: 'Second product' }
+  ];
+```
+
+```html
+<Product title={products[0].title} price={products[0].price} description={products[0].description}></Product>
+<Product title={products[1].title} price={products[1].price} description={products[1].description}></Product>
+```
+
 ### Alternative Ways of Passing & Receiving / Handling "props" [49]
 ### Adding "normal" JavaScript Logic to Components [50]
 ### Splitting Components Into Multiple Components [51]
