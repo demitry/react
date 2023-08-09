@@ -872,9 +872,34 @@ function ExpenseItem() {
 export default ExpenseItem;
 ```
 
-[] TODO: CSS
+https://github.com/academind/react-complete-guide-code/blob/03-react-basics-working-with-components/extra-files/ExpenseItem.css
+
+[] TODO: CSS?
 
 ### Outputting Dynamic Data & Working with Expressions in JSX [47]
+
+- Our data is hardcoded for now
+- How to reuse component?
+
+```js
+function ExpenseItem() {
+
+    const expenseDate = new Date(2023, 2, 28);
+    const expenseTitle = "Car Insurance";
+    const expenseAmount = 245.23;
+    
+    return (
+        <div className='expense-item'>
+            <div>{expenseDate.toDateString()}</div>
+            <div className='expense-item__description'>
+                <h2>{expenseTitle}</h2>
+                <div className='expense-item__price'>${expenseAmount}</div>
+            </div>
+        </div>
+    );
+}
+```
+
 ### Passing Data via "props" [48]
 ### Coding Exercise 5: Exercise: Passing Data via "props" [48]
 ### Alternative Ways of Passing & Receiving / Handling "props" [49]
