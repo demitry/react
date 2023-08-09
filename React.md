@@ -998,6 +998,37 @@ body {
 
 1. Alternative 1: Pass whole object
 
+```html
+<ExpenseItem expense={expenses[0]}></ExpenseItem>
+```
+
+```js
+function ExpenseItem(props) {
+    return (
+        <div className='expense-item'>
+            <div>{props.expense.date.toDateString()}</div>
+            <div className='expense-item__description'>
+                <h2>{props.expense.title}</h2>
+                <div className='expense-item__price'>${props.expense.amount}</div>
+            </div>
+        </div>
+    );
+}
+```
+
+2. Alternative 2: Destructuring props object
+
+```js
+export default function Product({title, price, description}) {
+    return (
+        <article className="product">
+            <h2>{title}</h2>
+            <p className="price">${price}</p>
+            <p>{description}</p>
+        </article>
+    );
+}
+```
 
 ### Adding "normal" JavaScript Logic to Components [50]
 ### Splitting Components Into Multiple Components [51]
