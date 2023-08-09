@@ -995,6 +995,10 @@ body {
 ```
 
 ### Alternative Ways of Passing & Receiving / Handling "props" [49]
+
+1. Alternative 1: Pass whole object
+
+
 ### Adding "normal" JavaScript Logic to Components [50]
 ### Splitting Components Into Multiple Components [51]
 ### Assignment 1: Time to Practice: React & Component Basics [51]
